@@ -47,3 +47,10 @@ SELECT first_name, last_name, hire_date
 FROM employees
 WHERE EXTRACT(year FROM hire_date) = 1986;
 
+SELECT d.dept_no, d.dept_name, e.emp_no, e.last_name, e.first_name
+FROM employees e
+JOIN dept_emp de
+ON e.emp_no=de.emp_no
+JOIN departments d
+ON de.dept_no=d.dept_no;
+
