@@ -41,4 +41,9 @@ CREATE TABLE titles(
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees e
 JOIN salaries s
-ON e.emp_no=s.emp_no
+ON e.emp_no=s.emp_no;
+
+SELECT first_name, last_name, hire_date
+FROM employees
+WHERE EXTRACT(year FROM hire_date) = 1986;
+
