@@ -61,3 +61,6 @@ ON e.emp_no=de.emp_no
 JOIN departments d
 ON de.dept_no=d.dept_no;
 
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name='Hercules' AND last_name ILIKE 'b%'
